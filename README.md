@@ -1,5 +1,32 @@
 # webpack loader that transforms a stylesheet into a Radium-compatible JS object
 
+
+## Installation
+
+```
+$ npm install radium-loader --save-dev
+```
+
+## Usage
+
+Chain after [css-loader](https://github.com/webpack/css-loader):
+
+```
+import React from 'react';
+import { Style } from 'radium';
+import radiumObject from 'radium!css!./stylesheet.css';
+
+export default React.createClass({
+    render() {
+        return (
+            <Style rules={ radiumObject } />
+        );
+    }
+});
+```
+
+## Motivation
+
 Everyone loves using inline styles. But not all React components support them.
 
 If you are using a third party component that does not support inline styles you can either:
@@ -19,31 +46,6 @@ That's where this module comes in. radium-loader wraps css-to-radium and provide
 functionality as a webpack loader, enabling you to `require()` a stylesheet and get a
 Radium-compatible JS object in return.
 
-
-## Installation
-
-```
-$ npm install radium-loader --save-dev
-```
-
-## Usage
-
-Chain after [css-loader](https://github.com/webpack/css-loader):
-
-```
-var radiumObject = require('radium!css!./stylesheet.css');
-
-var Radium = require('radium');
-var Style = Radium.Style;
-
-var Component = React.createClass({
-    render() {
-        return (
-            <Style rules={ radiumObject } />
-        );
-    }
-});
-```
 
 ## Testing
 
