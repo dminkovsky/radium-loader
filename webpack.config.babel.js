@@ -1,7 +1,7 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 export default {
-  entry: ['./tests/test.js'],
+  entry: './test/test.js',
   module: {
     loaders: [
       { test: /\.js?$/, exclude: /node_modules/, loader: 'babel' },
@@ -14,7 +14,7 @@ export default {
     }
   },
   output: {
-    path: 'tests',
+    path: 'test',
     filename: 'bundle.js'
   },
   plugins: [new HtmlWebpackPlugin()]
