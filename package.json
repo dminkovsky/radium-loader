@@ -2,12 +2,14 @@
   "name": "radium-loader",
   "version": "1.0.9",
   "description": "webpack loader that transforms a stylesheet into a Radium-compatible JS object",
-  "main": "index.js",
+  "main": "dist/index.js",
   "author": "Dmitry Minkovsky",
   "license": "MIT",
   "scripts": {
-    "clean": "if rm index.html bundle.js; then echo cleaned; fi",
-    "test": "webpack"
+    "clean": "if rm test/index.html test/bundle.js; then echo cleaned; fi",
+    "test": "webpack",
+    "babel": "babel ./lib --out-dir ./dist",
+    "prepublish": "npm run babel"
   },
   "repository": {
     "type": "git",
