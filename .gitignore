@@ -1,3 +1,4 @@
-node_modules/
+node_modules
+dist
 bundle.js
 index.html
