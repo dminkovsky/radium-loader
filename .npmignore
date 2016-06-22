@@ -1,0 +1,6 @@
+lib
+tests
+webpack.config.babel.js
+.jsbeautifyrc
+.babelrc
+.gitignore
