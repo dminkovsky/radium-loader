@@ -1,6 +1,6 @@
 {
   "name": "radium-loader",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "webpack loader that transforms a stylesheet into a Radium-compatible JS object",
   "main": "dist/index.js",
   "author": "Dmitry Minkovsky",
